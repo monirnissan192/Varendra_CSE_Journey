@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <!-- <script>
+        document.writeln ('<h1>this is the heading in java Script</h1>');
+    </script> -->
+    <!-- <h1 id="heading" onmouseover="ChangeColor('green')" onmouseleave="ChangeColor('black')">This is Change the Color</h1> -->
+   <!-- <h1 id="heading" onmouseover="ChangeColor()" onmouseleave="ChangeColor1()">This is Change the Color</h1> -->
+    
+   <!-- both are same working ^| -->
+     <!-- <h1 id="heading" onmouseover="ChangeColor()"onmouseleave="ChangeColor1()"</h1>
+    <input type="button"onclick="alert('Click');">This button is click; -->
+    <form name="form1">
+<input type="text" name="UserName">
+<button type="button" onclick="alert('Welcome '+document.form1.UserName.value)"> Click me </button>
+<p id="Para1"onclick="textchange()"> Welcome to our web page </p>
+
+
+    </form>
+   <script>
+    // alert("Work Alert")
+    // confirm("Do you want to remove the page");
+    // prompt("what is your name","Nissan")
+    //  function ChangeColor(newColor){
+    //     document.getElementById("heading").style.color=newColor;
+    //  }
+    //Similar working like upper new color
+    //   function ChangeColor(){
+    //    document.getElementById("heading").style.color="green";
+    //   }
+    //   function ChangeColor1(){
+    //    document.getElementById("heading").style.color="black";
+    //   }
+    // window.alert(" Window.alert and alert same function")
+
+    // c=prompt(" Do you read the books?");
+    // if(c==="YES"){
+    //     alert("That's Good")
+    //     }
+    //     else{
+    //         alert("You should Read");
+    // }
+    function textchange(){
+        document.getElementById("Para1").innerText=" Thanks for your coming";
+    }
+   </script>
+    
+</body>
+</html>

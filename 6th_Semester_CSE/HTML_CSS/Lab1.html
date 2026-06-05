@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Registration</title>
+    <link rel="stylesheet" href="Lab1.css">
+</head>
+<body>
+    <div class="Container">
+        <h2> Registration form </h2>
+        <form>
+
+        <!-- <lebel for="FName">Full Name</lebel>
+        <input type="text" id="FName" name="Fname" value="Monir Nissan"> -->
+
+        
+        <div class="form-group">
+        <label for="FName">Full Name</label>
+        <input type="text" id="FName" name="Fname" required><br>
+        </div>
+        <div class="form-group">
+        <label for="Email">Email</label>
+        <input type="Email" id="Email" name="Email" required><br>
+        </div>
+       <div class="form-group">
+        <label for="Password">Password</label>
+        <input type="Password" id="Password" name="Password" required><br>
+        </div>
+
+    <div class="form-group">
+    <label>Gender</label>
+    <div class="radio-group">
+        <input type="radio" id="male" name="gender" value="Male" required>
+        <label for="male">Male</label>
+
+        <input type="radio" id="female" name="gender" value="Female" required>
+        <label for="female">Female</label>
+    </div>
+</div>
+<!-- <lebel>Gender</lebel><br> without label connection
+         <input type="radio"  name="Gender" value="Male" required>Male<br>
+         <input type="radio"  name="Gender" value="Female" required>Female<br> -->
+
+         <div class="form-group">
+         <label for="DOB"> Date of birth </label>
+        <input type="date" id="DOB" name="DOB" required><br>
+        </div>
+        <input type="Submit" value="Register">
+        </form>
+    </div>
+    </form>
+</body>
+</html>

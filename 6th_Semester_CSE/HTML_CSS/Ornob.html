@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electricity Bill Estimation</title>
+    <style>
+        /* Styling the table with borders and a clear layout */
+        table {
+            border-collapse: collapse;
+            width: 60%;
+            margin: 20px auto;
+            font-family: sans-serif;
+        }
+        th, td {
+            border: 1px solid #333;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #e0e0e0;
+        }
+        caption {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <table id="billTable">
+        <caption>10-Year Estimated Electricity Bill Projection</caption>
+        <thead>
+            <tr>
+                <th>Year</th>
+                <th>Estimated Electricity Bill ($)</th>
+                <th>Increase from Previous Year ($)</th>
+            </tr>
+        </thead>
+        <tbody id="tableBody">
+            </tbody>
+    </table>
+
+    <script>
+        // Initial assumptions
+        let currentBill = 1200.00; // Starting yearly bill of $1200
+        const percentageIncrease = 0.05; // 5% increase per year
+
+        // Grab the empty table body by its ID
+        const tbody = document.getElementById("tableBody");
+
+        // Loop to calculate and generate rows for 10 years
+        for (let year = 1; year <= 10; year++) {
+            
+            // Calculate the increase and the new bill amount
+            let increase = currentBill * percentageIncrease;
+            currentBill += increase;
+
+            // Create a new table row element
+            let tr = document.createElement("tr");
+
+            // Create standard table data cells
+            let tdYear = document.createElement("td");
+            let tdBill = document.createElement("td");
+            let tdIncrease = document.createElement("td");
+
+            // Insert the calculated text into the cells
+            tdYear.textContent = year;
+            // .toFixed(2) ensures the numbers have exactly two decimal places
+            tdBill.textContent = currentBill.toFixed(2);
+            tdIncrease.textContent = increase.toFixed(2);
+
+            // Attach the cells to the row
+            tr.appendChild(tdYear);
+            tr.appendChild(tdBill);
+            tr.appendChild(tdIncrease);
+
+            // Attach the completed row to the table body
+            tbody.appendChild(tr);
+        }
+    </script>
+
+</body>
+</html>

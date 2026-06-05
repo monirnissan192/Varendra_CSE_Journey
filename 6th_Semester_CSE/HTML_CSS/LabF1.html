@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<head>
+    <title>Document</title>
+</head>
+<!-- <h1 onclick="alert('This is a header')">Clickble Heading</h1> -->
+ <!-- <h1 id="heading" onmouseover="Color()" onmouseleave="Color1('red')">Color Change Green to Red </h1> -->
+  <form name="form1" >
+    <input type="text" name="UserName">
+    <button id="btn" onclick="getname()"> Click to have submit </button>
+  </form>
+<body>
+    <script>
+        // function Color(){
+        //     document.getElementById("heading").style.color="green"
+        // }
+        // function Color1(){
+        //     document.getElementById("heading").style.color="black"
+        // }
+        // var x=prompt("What is your Name?",'Nissan')
+        // document.writeln("welcome "+x)
+        // var x=confirm(" Do you want to read the books")
+        // document.writeln(x)
+        //We know that Propmt is String or javascript is String i convert it into number or any data type how i convert?
+        //i convert using Persent Operation 
+
+        // var Num=parseInt(prompt("How many Number do you want to add"))
+        
+        // for(let i=0;i<Num;i++){
+        //      var Count=parseInt(prompt("Enter a number"))
+        //     document.writeln("<br>",Count,"<br>");
+        //       }
+
+        // var Num=parseInt(prompt("How many Number do you want to add"))
+        // var Sum=0
+        // for(let i=0;i<Num;i++){
+        //     var Summation=parseInt(prompt("Enter a number"))
+        //     Sum=Sum+Summation
+        //       }
+            //   document.writeln("<br>",Sum,"<br>")
+            //   document.writeln(Sum)
+
+            //I Can use for loop like that
+            // for(let i=0;i<5;i++){
+            //     document.writeln("<br>",i,"<br>")
+            // }
+            
+
+            // var Num1=prompt("Enter the First Number1");
+            // var Num2=prompt("Enter the First Number2");
+//Summation in Webpage Console
+            // var x=12;
+            // var y=13;
+            // console.log(x+y);
+
+            function getname(){
+                document.writeln("Welcome "+document.form1.UserName.value)
+            }
+
+    </script>
+</body>
+</html>
