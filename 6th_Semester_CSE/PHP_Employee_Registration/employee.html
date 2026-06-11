@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Information Form:</title>
+    <style>
+        body {
+            font-family: Arial;
+        }
+        .box {
+            width: 320px;
+            border: 1px solid black;
+            padding: 20px;
+            margin: auto;
+            margin-top: 40px;
+        }
+        h3 {
+            margin-top: 0;
+        }
+        input, textarea {
+            margin-top: 5px;
+            margin-bottom: 8px;
+        }
+        textarea {
+            width: 250px;
+            height: 60px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h3>Employee Information Form:</h3>
+        <form action="employee.php" method="post" enctype="multipart/form-data">
+            
+            <label for="Employee ID">Employee ID:</label><br>
+            <input type="text" id="Employee ID" name="Employee ID"><br>
+
+            <label for="Employee Name">Employee Name:</label><br>
+            <input type="text" id="Employee Name" name="Employee Name"><br>
+
+            <label for="Email">Email:</label><br>
+            <input type="Email" id="Email" name="Email"><br>
+
+            <label for="Phone Number">Phone Number:</label><br>
+            <input type="text" id="Phone Number" name="Phone Number"><br>
+
+            <label for="Designation">Designation:</label><br>
+            <input type="text" id="Designation" name="Designation"><br>
+
+            <label for="Gender">Gender:</label><br>
+
+            <input type="radio" name="Gender" id="Male" value="Male">
+            <label for="Male">Male</label><br>
+
+            <input type="radio" name="Gender" id="Female" value="Female">
+            <label for="Female">Female</label><br>
+
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+
+        </form>
+    </div>
+</body>
+</html>
