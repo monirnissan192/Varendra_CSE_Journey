@@ -93,8 +93,6 @@ def first_fit(memory, process_size, process_name):
             return fragmentation
 
     return None
-
-
 # ------------------------------------------
 # Best Fit Algorithm
 # ------------------------------------------
@@ -104,53 +102,35 @@ def best_fit(memory, process_size, process_name):
     min_fragment = float('inf')
 
     for block in memory:
-
         if block.free and block.size >= process_size:
-
-            fragment = block.size - process_size
-
+            fragment = block.size-process_size
             if fragment < min_fragment:
                 min_fragment = fragment
-                best_block = block
-
+                best_block=block
     if best_block:
-
         best_block.free = False
-        best_block.process = process_name
-
+        best_block.process=process_size
         return min_fragment
-
     return None
 
-
-# ------------------------------------------
+            
+# -----------------------------------------
 # Worst Fit Algorithm
 # ------------------------------------------
 def worst_fit(memory, process_size, process_name):
-
     worst_block = None
-    max_fragment = -1
-
+    max_fragment=-1
     for block in memory:
-
         if block.free and block.size >= process_size:
-
-            fragment = block.size - process_size
-
-            if fragment > max_fragment:
-                max_fragment = fragment
-                worst_block = block
-
+            fragment=block.size-process_size
+            if fragment>max_fragment:
+               max_fragment=fragment
+               worst_block=block
     if worst_block:
-
         worst_block.free = False
         worst_block.process = process_name
-
         return max_fragment
-
     return None
-
-
 # ------------------------------------------
 # Next Fit Algorithm
 # ------------------------------------------

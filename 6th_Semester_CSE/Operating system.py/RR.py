@@ -1,4 +1,5 @@
 from collections import deque
+from tracemalloc import start
 
 processes = [
     {"id": "P1", "at": 0, "bt": 10},
@@ -47,7 +48,6 @@ while i < len(processes) or queue:
         queue.append(current)
     else:
         completed[current] = time
-
 print("\nGantt Chart:")
 for p in gantt:
     print(f"| {p[0]} ", end="")
